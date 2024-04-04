@@ -1,0 +1,36 @@
+@charset "ISO-8859-1";
+body{
+	background-color: #c6e7c9;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+}
+h1{
+	color: #335e90;
+}
+.cards{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+}
+.card{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 40px;
+}
+.card-img-top{
+    width: 75%;
+}
+.card-title{
+	font-size: 20px;
+	color: #335e90;
+}
+.card-text, .card-title{
+    text-align: center;
+}
