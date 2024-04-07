@@ -39,11 +39,13 @@ public class ProductDaoImpl implements IproductDao{
 	public List<Product> productsByMC(String mc) {
 		List<Product> products=new ArrayList<Product>();
 		Connection connection = SingletonConnection.getConnection();
+		
+	
 		try {
-			PreparedStatement ps=connection.prepareStatement
+			PreparedStatement ps3=connection.prepareStatement
 					("SELECT * FROM STOCK WHERE NAME LIKE ?");
-			ps.setString(1, mc);
-			ResultSet rs=ps.executeQuery();
+			ps3.setString(1, mc);
+			ResultSet rs=ps3.executeQuery();
 			while(rs.next()) {
 				Product p=new Product();
 				p.setId(rs.getInt("ID"));
